@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>첫 페이지</title>
+</head>
+<body>
+h1태그가 문단<h1>n값이 증가하면 글자가 작아집니다.</h1>으로 동작하나?
+<p>
+문단을 추가합니다.
+<br>
+<br>
+<br>
+
+
+
+빈공백이나 엔터키, 탭키는 빈공백문자 1개로 간주합니다.
+			여기서 출력
+			
+빈 공백문자 &nbsp; &nbsp; &nbsp; &nbsp; 출력
+</p>
+<p>
+화면에 <br>이라고 출력해보세요.
+
+</body>
+</html>

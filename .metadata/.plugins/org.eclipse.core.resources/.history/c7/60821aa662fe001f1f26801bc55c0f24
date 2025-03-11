@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>첫 페이지</title>
+</head>
+<body>
+h1태그가 문단<h1>n값이 증가하면 글자가 작아집니다.</h1>으로 동작하나?
+</body>
+</html>

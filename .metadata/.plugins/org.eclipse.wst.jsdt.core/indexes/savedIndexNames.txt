@@ -1,0 +1,4 @@
+INDEX VERSION 1.4+/Users/jun/Desktop/internet_programming/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2771485035.index
+2487664342.index
+1010356433.index
