@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.myFont {
+    font-family: "궁서체", "배달의민족 도현";
+}
+
+#myID {
+    font-family: "궁서체";
+    color: red;
+    font-size: 50px;
+    font-weight: bold;
+}
