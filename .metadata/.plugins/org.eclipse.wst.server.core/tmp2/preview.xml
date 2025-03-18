@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<server port="8080">
-  <module context="T02" name="T02" path="/Users/jun/Desktop/internet_programming/.metadata/.plugins/org.eclipse.wst.server.core/tmp2/T02" type="static"/>
-</server>
