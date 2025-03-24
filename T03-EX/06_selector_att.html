@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [title~=hello] {
+            color: blue;
+        }
+
+        [title=student] {
+            color: green;
+        }
+
+        [lang|=en] {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Will apply to:</h2>
+    <h1 title="hello world">Hello World</h1>
+    <p title="student hello">Hello CSS Student!</p>
+    <p title="student">Students</p>
+    <hr>
+    <p lang="en">Hello!</p>
+    <p lang="us-en">Hi!</p>
+    <p lang="en-gb">Ello!</p>
+</body>
+
+</html>
