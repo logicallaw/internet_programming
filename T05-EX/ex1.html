@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+    <script>
+        function showMsg(str) {
+            alert("지금은 " + str + " 이벤트가 실행되었습니다.");
+        }
+    </script>
+</head>
+
+<body onLoad="showMsg('onLoad')" onunload="showMsg('onUnLoad')" onbeforeunload="return 0" onresize="showMsg('resize')">
+    <p><a href="#" onmouseover="showMsg('mouseover')">mouseover 이벤트</a></p>
+    <div onmouseout="showMsg('mouseout')">MouseOut 이벤트 </div>
+    <p><button onclick="showMsg('click')">click 이벤트</button></p>
+    <p><a href="#" onmousedown="showMsg('onmousedown')">onmousedown 이벤트</a></p>
+    <p><a href="https://www.w3schools.com">w3schools.com</a> </p>
+
+</body>
+
+
+</html>
