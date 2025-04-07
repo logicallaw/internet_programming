@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // prompt의 두 번째 인자는 초기값이다.
+        // 만약, "" 가 아닌 " " 라면,
+        // 사용자가 지우지 않는 다면 공백이 포함된 상태로 리턴해서
+        // 기대하는 출력값을 얻지 못 할 수 있으니 주의하자!
+        var num = prompt("2*3=?", "");
+        // prompt 함수의 리턴 값의 자료형은 string 이다.
+        document.write(typeof num);
+        // == 연산자는 형 변환이 필요하면, 형 변환 후에 값을 비교한다.
+        // 이 문제에서는 number인 6을 더 큰 자료형인 string으로 형 변환하여,
+        // string인 num과 string인 6의 값을 비교한다.
+        if (num == 6) {
+            alert("정답입니다.");
+        } else {
+            alert("오답입니다.");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

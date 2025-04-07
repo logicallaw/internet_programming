@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function aaa(str) {
+            alert("지금은 " + str + "이벤트가 실행되었습니다.");
+        }
+    </script>
+</head>
+
+<body>
+    <p><input type="text" value="keydown" onkeydown="aaa('keydown')" </p>
+    <p><input type="text" value="keypress" onkeypress="aaa('keypress')"></p>
+    <p><input type="text" value="keypress" onkeyup="aaa('keyup')"></p>
+    <select name="select" onchange="aaa('change')">
+        <option value="1">선택1</option>
+        <option value="2">선택2</option>
+        <option value="3">선택3</option>
+    </select>
+</body>
+
+</html>

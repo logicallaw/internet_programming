@@ -1,16 +1,18 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        document.write("head 내부형 자바스크립트<br>");
+        var temp = confirm("확인 또는 취소 하세요!");
+        document.write(temp); // 확인: true, 취소: false를 출력하게 된다.
     </script>
 </head>
 
 <body>
-    <p onclick="alert('인라인형 스크립트')"></p>
+
 </body>
 
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showMsg(str) {
+            alert("지금은 " + str + " 이벤트가 실행되었습니다.");
+        }
+    </script>
+</head>
+
+<!-- <body onload="showMsg('onload')" onunload="showMsg('onUnload')" onbeforeunload="showMsg('return 0')"
+    onresize="showMsg('resize')"> -->
+
+<body>
+    <p><a href="#" onmouseover="showMsg('onmouseover')" onmouseout="showMsg('onMouseOut')"
+            ondblclick="showMsg('onDblClick')" onmousedown="showMsg('onMouseDown')">mouseover 이벤트</a></p>
+</body>
+
+</html>

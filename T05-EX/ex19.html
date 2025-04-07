@@ -1,16 +1,19 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        document.write("head 내부형 자바스크립트<br>");
+        var numstr = prompt("수식을 입력하십시오");
+        document.write("입력한 수식 : " + numstr + "<br>");
+        document.write("답        : " + eval(numstr));
     </script>
 </head>
 
 <body>
-    <p onclick="alert('인라인형 스크립트')"></p>
+    
 </body>
 
 </html>
