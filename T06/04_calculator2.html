@@ -1,0 +1,62 @@
+<!-- 
+제시된 화면과 같은 계산기를 구성하고, 각 버튼을 클릭하면 display text 입력 상자에 입력된 수식을 출력하시오.
+"C"를 누르면, 입력했던 수식을 초기화 시키고,
+"="를 투르면, 입력했던 수식의 계산 결과를 출력하시오.
+  -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>계산기</title>
+    <style>
+        .button {
+            border: 1px solid black;
+            height: 50px;
+            width: 50px;
+            margin-top: 2px;
+            text-align: center;
+            background-color: lightgray;
+        }
+
+        .button:active {
+            background-color: gray;
+        }
+    </style>
+    <script>
+        function clearDisplay() {
+            document.getElementById("calculator").value = "";
+        }
+
+        function add(obj) {
+            var val = obj.value;
+            document.getElementById("calculator").value = document.getElementById("calculator").value + val;
+        }
+
+        function compute() {
+            document.getElementById("calculator").value = eval(document.getElementById("calculator").value);
+        }
+    </script>
+</head>
+
+<body>
+    display: <input type="text" id="calculator" readonly><br>
+    <input class="button" style="margin-top:10px;" onclick="clickBtn(this)" value="7">
+    <input class="button" onclick="add(this)" value="8">
+    <input class="button" onclick="add(this)" value="9">
+    <input class="button" onclick="add(this)" value="/"><br>
+    <input class="button" onclick="add(this)" value="4">
+    <input class="button" onclick="add(this)" value="5">
+    <input class="button" onclick="add(this)" value="6">
+    <input class="button" onclick="add(this)" value="*"><br>
+    <input class="button" onclick="add(this)" value="1">
+    <input class="button" onclick="add(this)" value="2">
+    <input class="button" onclick="add(this)" value="3">
+    <input class="button" onclick="add(this)" value="-"><br>
+    <input class="button" onclick="add(this)" value="0">
+    <input class="button" onclick="add(this)" value="+">
+    <input class="button" onclick="clear()" value="C">
+    <input class="button" onclick="compute()" value="="><br>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!-- 
+제시된 화면과 같은 계산기를 구성하고, 각 버튼을 클릭하면 display text 입력 상자에 입력된 수식을 출력하시오.
+"C"를 누르면, 입력했던 수식을 초기화 시키고,
+"="를 투르면, 입력했던 수식의 계산 결과를 출력하시오.
+  -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>계산기</title>
+  <style>
+    .btn {
+      border: 1px solid black;
+      height: 50px;
+      width: 50px;
+      margin-top: 2px
+    }
+
+    .btn:active {
+      background-color: lightgray;
+    }
+  </style>
+  <script>
+    function initValue() {
+      document.getElementById("calculator").value = "";
+    }
+
+    function clickBtn(obj) {
+      var val = obj.innerHTML;
+      document.getElementById("calculator").value = document.getElementById("calculator").value + val;
+    }
+
+    function getResult() {
+      document.getElementById("calculator").value = eval(document.getElementById("calculator").value);
+    }
+  </script>
+</head>
+
+<body>
+  display: <input type="text" id="calculator"><br>
+  <button class="btn" style="margin-top: 10px" onclick="clickBtn(this)">7</button>
+  <button class="btn" onclick="clickBtn(this)">8</button>
+  <button class="btn" onclick="clickBtn(this)">9</button>
+  <button class="btn" onclick="clickBtn(this)">/</button>
+  <br>
+  <button class="btn" onclick="clickBtn(this)">4</button>
+  <button class="btn" onclick="clickBtn(this)">5</button>
+  <button class="btn" onclick="clickBtn(this)">6</button>
+  <button class="btn" onclick="clickBtn(this)">*</button>
+  <br>
+  <button class="btn" onclick="clickBtn(this)">1</button>
+  <button class="btn" onclick="clickBtn(this)">2</button>
+  <button class="btn" onclick="clickBtn(this)">3</button>
+  <button class="btn" onclick="clickBtn(this)">-</button>
+  <br>
+  <button class="btn" onclick="clickBtn(this)">0</button>
+  <button class="btn" onclick="clickBtn(this)">+</button>
+  <button class="btn" onclick="initValue()">C</button>
+  <button class="btn" onclick="getResult()">=</button>
+  <br>
+</body>
+
+</html>
