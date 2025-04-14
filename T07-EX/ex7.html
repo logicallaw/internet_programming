@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function change() {
+            document.images[0].src = "images/orange.png";
+        }
+
+        function showSrc() {
+            var arrObj = document.images;
+            var sourceObj = document.getElementById('source');
+            for (var i = 0; i < arrObj.length; i++) {
+                sourceObj.innerHTML += arrObj[i].src + '<br>';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <img src="images/kiwi.png" width="128" height="128">
+    <img src="images/smile.png" width="128" height="128" onclick="change()">
+    <p>
+        <button type="button" onclick="showSrc()">이미지 경로 보기</button>
+    </p>
+    <div id="source"></div>
+</body>
+
+</html>

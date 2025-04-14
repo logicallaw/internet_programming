@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="myid">
+        <p>sub p1</p>
+        <p id="middle">sub p2</p>
+        <p>sub p3</p>
+    </div>
+    <script>
+        var arr1 = document.getElementById('myid').children;
+        console.log(arr1);
+
+        var arr2 = document.getElementById('middle').childNodes;
+        console.log(arr2);
+
+        console.log(document.getElementById('myid').firstChild);
+        console.log(document.getElementById('myid').lastElementChild);
+        console.log(document.getElementById('middle').previousSibling);
+        console.log(document.getElementById('middle').previousElementSibling);
+    </script>
+</body>
+
+</html>

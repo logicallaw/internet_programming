@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        td.left {
+            text-align: left;
+        }
+    </style>
+    <script src="cookie.js"></script>
+    <script>
+        window.onload = function () {
+            var user_id = getCookie('user_id');
+
+            if (user_id != "") {
+                document.getElementById('user_id').value = user_id;
+                document.getElementById('user_check').checked = true;
+            }
+        }
+
+        function setUserCookie() {
+            var idObj = document.getElementById('user_id');
+            var chkObj = document.getElementById('user_check');
+
+            try {
+                if (idObj.value.length == 0) throw 'idEmpty';
+
+                if (chkObj.checked) {
+                    setCookie('user_id', idObj.value, 1);
+                } else {
+                    setCookie('user_id', "", -1);
+                }
+            } catch (err) {
+                if (err == 'idEmpty') {
+                    alert('User id를 입력하세요');
+                    chkObj.checked = false;
+                    idObj.focus();
+                    return false;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>쿠키로 이용자의 ID 기억하기</h2>
+    <form action="#" name="fm1" method="post">
+        <table>
+            <tr>
+                <th>ID</th>
+                <td class="left"><input type="text" size="10" name="user_id" id="user_id"></td>
+            </tr>
+            <tr>
+                <th>PW</th>
+                <td class="left">
+                    <input type="password" size="10" name="passwd" id="passwd">
+                    <input type="submit" name="ok" value=" 확 인 ">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="checkbox" id="user_check" onclick="setUserCookie()">User ID 기억
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

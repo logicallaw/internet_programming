@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add() {
+            var optionObj = document.createElement('option');
+
+            optionObj.setAttribute('value', 'my fruit');
+            var t = document.createTextNode('추가 과일');
+            optionObj.appendChild(t);
+            document.getElementById('mySelect').appendChild(optionObj);
+        }
+    </script>
+</head>
+
+<body>
+    <select size="6" id="mySelect">
+        <option value="apple">사과</option>
+    </select>
+    <button type="button" onclick="add()">추가</button>
+</body>
+
+</html>

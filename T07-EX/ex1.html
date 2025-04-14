@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var divGroup;
+        function addText() {
+            divGroup = document.getElementById('divGroup');
+            var divObj = document.createElement('div');
+            var inputObj = document.createElement('input');
+            inputObj.setAttribute('type', 'text');
+            inputObj.setAttribute('name', 'num');
+            divObj.appendChild(inputObj);
+
+            divGroup.appendChild(divObj);
+        }
+
+        function showDate() {
+            var arrObj = document.getElementsByName('num');
+            var str = 0;
+            for (var idx = 0; idx < arrObj.length; ++idx) {
+                str += parseInt(arrObj[idx].value);
+            }
+            document.getElementById('userData').innerHTML = str;
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="텍스트 입력 양식 추가" onclick="addText()">
+    <input type="button" value="입력 값 보기" onclick="showDate()">
+    <div id="userData"></div>
+    <div id="divGroup"></div>
+</body>
+
+</html>

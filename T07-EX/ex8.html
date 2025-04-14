@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            var imgObj = document.getElementById('myImg');
+            document.getElementById('myImg').onmouseover = function () {
+                imgObj.src = 'images/button2.png';
+                document.getElementById('title').innerHTML = '마우스 오버';
+                document.getElementById('img_src').innerHTML = imgObj.src;
+            }
+
+            document.getElementById('myImg').onmouseout = function () {
+                imgObj.src = 'images/button1.png';
+                document.getElementById('title').innerHTML = '마우스 아웃';
+                document.getElementById('img_src').innerHTML = imgObj.src;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="title">마우스 아웃</h1>
+    <img src="images/button1.png" alt="버튼" id="myImg">
+    <p id="img_src"></p>
+</body>
+
+</html>
