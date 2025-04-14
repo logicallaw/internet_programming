@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var pid;
+
+        function showTime() {
+            var today = new Date();
+            var s = today.getSeconds();
+
+            var obj = document.getElementById("time");
+            obj.innerText = s;
+
+        }
+
+        function startTime() {
+            pid = window.setInterval("showTime()", 1000);
+        }
+
+        function endTime() {
+            window.clearInterval(pid);
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="button" value="시작" onclick="startTime()">
+    <input type="button" value="중지" onclick="endTime()">
+    <div id="time"></div>
+</body>
+
+</html>
