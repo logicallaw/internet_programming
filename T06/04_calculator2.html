@@ -34,7 +34,12 @@
         }
 
         function compute() {
-            document.getElementById("calculator").value = eval(document.getElementById("calculator").value);
+            try {
+                document.getElementById("calculator").value = eval(document.getElementById("calculator").value);
+            } catch (err) {
+                alert('정상적인 수식이 아닙니다.\n' + '오류 이름: ' + err.name + ', 오류 메시지: ' + err.message);
+                document.getElementById('calculator').value = '';
+            }
         }
     </script>
 </head>

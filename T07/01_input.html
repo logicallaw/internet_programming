@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>입력양식 결과값</title>
+	<style>
+		table {
+			border-collapse: collapse
+		}
+
+		table th {
+			background-color: lightgray
+		}
+	</style>
+	<script>
+		/*
+		 *1. 사용자가 입력한 모든 값을 alert 경고창에 출력하시오.
+			 아이디는 반드시 입력되어야 하며, 영문소문자로 시작하는 4~8자 영문자 또는 숫자이어야 합니다.
+		 */
+		function showUserData() {
+			var obj = document.getElementById('myId');
+
+			var patt = /^[a-z]{1}[a-zA-z0-9]{3,7}/g;
+
+			if (obj.value.length == 0) {
+				alert('아이디를 입력하세요.');
+				obj.focus();
+				return false; // 현재 페이지 머무르게 리턴시킴
+			} else if (!patt.test(obj.value)) {
+				alert('아이디는 영문소문자로 시작하는 4-8자 영문자 또는 숫자이어야 합니다.');
+				return false;
+			}
+
+			var str = '아이디: ' + obj.value + '\n';
+
+			obj = document.getElementById('myPwd');
+			str += '암호: ' + obj.value + "\n";
+
+			obj = document.getElementsByName('myChk');
+			var temp = '';
+			for (idx in obj) {
+				console.log(idx);
+				if (obj[idx].checked) {
+					temp += obj[idx].value + ', ';
+				}
+			}
+			str += '체크박스 선택: ' + temp + '\n';
+
+
+			obj = document.getElementsByName('myRadio');
+			var temp = '';
+			for (idx in obj) {
+				console.log(idx);
+				if (obj[idx].checked) {
+					temp += obj[idx].value;
+				}
+			}
+			str += '라디오 선택: ' + temp + '\n';
+
+			obj = document.getElementById('mySel');
+			str += '목록상자 선택: ' + obj.value + '\n';
+
+			obj = document.getElementsByName('myDate')[0];
+			str += '날짜 선택: ' + obj.value + '\n';
+
+			obj = document.getElementById('myColor');
+			str += '색상 선택: ' + obj.value + '\n';
+
+			// var arr = document.getElementsByName('myChk');
+			// str += '체크: ';
+			// for (var i = 0; i < arr.length; i++) {
+			// 	if (arr[i].checked) {
+			// 		str += arr[i].value + ', ';
+			// 	}
+			// }
+			// str += '\n';
+
+			// arr = document.getElementsByName('myRadio');
+			// str += '라디오: ';
+			// for (var i = 0; i < arr.length; i++) {
+			// 	if (arr[i].checked) {
+			// 		str += arr[i].value + '\n';
+			// 		break;
+			// 	}
+			// }
+
+			alert(str);
+
+			return false;
+		}
+
+
+
+
+	</script>
+</head>
+
+<body>
+	<form action="#" method="post" onsubmit="return showUserData()">
+		<table border="1">
+			<tr>
+				<th>아이디</th>
+				<td><input type="text" id="myId" name="myId"></td>
+			</tr>
+			<tr>
+				<th>암호</th>
+				<td><input type="password" id="myPwd" name="myPwd"></td>
+			</tr>
+			<tr>
+				<th>checkbox 선택</th>
+				<td>
+					<input type="checkbox" name="myChk" value="체크1">체크1
+					<input type="checkbox" name="myChk" value="체크2">체크2
+					<input type="checkbox" name="myChk" value="체크3">체크3
+				</td>
+			</tr>
+			<tr>
+				<th>radio 선택</th>
+				<td>
+					<input type="radio" name="myRadio" value="라디오1">라디오1
+					<input type="radio" name="myRadio" value="라디오2">라디오2
+					<input type="radio" name="myRadio" value="라디오3">라디오3
+				</td>
+			</tr>
+			<tr>
+				<th>선택목록</th>
+				<td>
+					<select id="mySel" name="mySel">
+						<option value="목록1">목록1</option>
+						<option value="목록2">목록2</option>
+						<option value="목록3">목록3</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>날짜</th>
+				<td><input type="date" id="myDate" name="myDate"></td>
+			</tr>
+			<tr>
+				<th>색깔</th>
+				<td><input type="color" id="myColor" name="myColor"></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align:center">
+					<input type="submit" value="전송">
+					<input type="reset" value="취소">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+
+</html>
