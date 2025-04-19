@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td:first-child {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 0px 10px;
+            margin: 0px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1" style="border-collapse: collapse; width: 100%">
+        <tr>
+            <td>
+                id
+            </td>
+            <td>
+                <input type="text" maxlength="10">
+            </td>
+        </tr>
+        <tr>
+            <td>성명</td>
+            <td><input type="text" maxlength="10"></td>
+        </tr>
+        <tr>
+            <td>전자우편</td>
+            <td><input type="text" maxlength="10"></td>
+        </tr>
+        <tr>
+            <td>암호</td>
+            <td><input type="password" size="8"></td>
+        </tr>
+        <tr>
+            <td>성별</td>
+            <td>
+                <input type="radio" name="sex" value="남">남
+                <input type="radio" name="sex" value="여">여
+            </td>
+        </tr>
+        <tr>
+            <td>직업</td>
+            <td>
+                <select name="job">
+                    <option value="컴퓨터기사">컴퓨터기사</option>
+                    <option value="요리사">요리사</option>
+                    <option value="프로게이머">프로게이머</option>
+                    <option value="학생">학생</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>내용</td>
+            <td>
+                <textarea rows="5" cols="20">가로 20자, 세로 5줄 길이로 설정</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="가입">
+                <input type="reset" value="취소">
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
