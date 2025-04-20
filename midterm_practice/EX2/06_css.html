@@ -6,19 +6,33 @@
 	<title>선택자 연습</title>
 	<style>
 		/* 1. div내의 모든 후손 i 태그(요소)의 글자를 진하게 하시오.*/
-
+		div i {
+			font-weight: bold;
+		}
 
 		/* 2. div 바로 다음에 오는 인접한 형제 요소 p 태그를 선택하여 글자색을 파란색으로 설정하시오. */
-
+		div+p {
+			color: blue;
+		}
 
 		/*3. class="mylist"인 태그 중에서 두번째 태그 배경색을 노란색으로 지정하시오. */
-
+		li.mylist:nth-of-type(2) {
+			background-color: yellow;
+		}
 
 		/*4. 맨 마지막의 p 태그에 대한 id를 p3으로 정의하고,
 	 이 요소내의 첫 문자를 대문자로, 진하게, 글자크기 40px, 배경색을 노란색로 선언하시오. */
-
+		p#p3::first-letter {
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 40px;
+			background-color: yellow;
+		}
 
 		/* 5. id="myol"인 요소의 직계 자식 요소들 li를 선택하고, 글자색을 green으로 선언하시오.  */
+		#myol>li {
+			color: green;
+		}
 	</style>
 </head>
 

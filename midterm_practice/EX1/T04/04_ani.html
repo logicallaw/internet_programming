@@ -14,6 +14,21 @@
 */
 
 
+      #animated_div {
+         width: 80px;
+         height: 50px;
+         border-radius: 5px;
+         color: white;
+         background-color: cyan;
+         font-weight: bold;
+         font-size: 20px;
+         padding: 10px;
+         margin-top: 30px;
+         animation-name: animated_div;
+         animation-duration: 5s;
+         animation-iteration-count: 2;
+         position: relative;
+      }
 
 
 
@@ -23,6 +38,24 @@
    left 0px인 지점에서 20도정도 회전시키고, left 500px 지점으로 이동시키시오.
       다시, left 0px인 지점으로 되돌아 오면서 360도 회선시키면서 이동시키시오.
 */
+
+      @keyframes animated_div {
+         0% {
+            left: 0px;
+            transform: rotate(20deg);
+         }
+
+         50% {
+            left: 500px;
+            background-color: bisque;
+         }
+
+         100% {
+            left: 0px;
+            transform: rotate(360deg);
+            background-color: aqua;
+         }
+      }
    </style>
 </head>
 

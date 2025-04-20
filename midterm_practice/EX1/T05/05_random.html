@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Math 객체</title>
+    <script>
+        /*
+         * 컴퓨터가 생성한 1~9사이의 임의의 숫자를 맞추기 위한 프로그램을 작성하시오.
+         * 숫자 0을 입력하면 프로그램을 종료시키고,
+         * 숫자가 틀릴 경우, 사용자 입력 숫자가 컴퓨터의 숫자보다 큰지 작은지를 알려주고,
+         * 계속 숫자를 입력 받을 수 있도록 프로그램을 작성하시오.
+         *
+         */
+        function getRandomNumber() {
+            return Math.floor(Math.random() * 9 + 1);
+
+        }
+
+        function magicNumber() {
+            var computerNumber = getRandomNumber();
+            do {
+                var userNumber = parseInt(prompt('숫자', ''));
+                if (userNumber > computerNumber) {
+                    alert('유저의 수가 컴퓨터의 수보다 큽니다.');
+                } else if (userNumber < computerNumber) {
+                    alert('유저의 수가 컴퓨터의 수보다 작습니다.');
+                } else {
+                    alert('정답입니다. 유저: ' + userNumber + ', 컴퓨터: ' + computerNumber);
+                    break;
+                }
+            } while (userNumber !== 0);
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="magicNumber()">숫자 맞추기</button>
+</body>
+
+</html>
