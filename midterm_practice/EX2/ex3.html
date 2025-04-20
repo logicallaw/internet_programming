@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function maxopen(url, winattributes) {
+            var maxwindow = window.open(url, "", winattributes);
+            maxwindow.moveTo(0, 0);
+            maxwindow.resizeTo(screen.availWidth, screen.availHeight);
+        }
+
+        document.write('screen.height : ', window.screen.height, '<br>');
+        document.write('screen.width : ', window.screen.width, '<br>');
+        document.write('screen.availHeight : ', window.screen.availHeight, '<br>');
+        document.write('screen.availWidth : ', window.screen.availWidth, '<br>');
+        document.write('screen.colorDepth : ', window.screen.colorDepth, '<br>');
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
